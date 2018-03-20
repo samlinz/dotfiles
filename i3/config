@@ -36,6 +36,10 @@ exec --no-startup-id wallpaper
 # Set keymap to finnish
 exec --no-startup-id setxkbmap fi
 
+# Start Corsair keyboard drivers
+exec --no-startup-id sudo ckb-daemon
+exec --no-startup-id ckb -b
+
 # Color theme
 set $FOCUS #989898
 set $UNFOCUS #3c3b37
@@ -100,6 +104,7 @@ bindsym $mod+Left move container to output left
 
 # Fancy lock screen
 bindsym $mod+Shift+p exec /home/samlinz/.i3/i3lock-fancy-multimonitor/lock
+bindsym $mod+Shift+Escape exec /home/samlinz/.i3/i3lock-fancy-multimonitor/lock && sudo systemctl suspend
 
 ##### END CUSTOM
 # Mostly default settings below
